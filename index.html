@@ -12,6 +12,41 @@
         const max = 10;
         const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
         console.log(randomNumber);
+
+        function splitString(str) {
+            if (str === '') return [];
+
+            if (str.length % 2 !== 0) {
+                str += '_';
+            }
+            
+            const results = [];
+            const splittedString = str.split('')
+            console.log(splittedString);
+
+            for (let i = 0; i < splittedString.length; i += 2) {
+                results.push(splittedString[i] + splittedString[i + 1]);
+            }
+
+            console.log(results);
+
+            return results;
+        }
+
+        splitString('12345');
+
+        let string = "Let's have some fun with JavaScript!";
+
+        console.log(string.at(4))
+
+        let myString = 'Hello, world! \n It\'s JavaScript!'
+
+        console.log(myString);
+
+        let name = 'Daniel';
+        let editableName = name.replace('a', 'e');
+        console.log(editableName);
+        console.log(name.repeat(3));
     </script>
 </body>
 </html>
